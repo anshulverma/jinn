@@ -6,7 +6,11 @@ public class ObjectSizeFetcher {
 
   private static Instrumentation instrumentation;
 
+  public static void premain(String args, Instrumentation instrumentation) {
+    ObjectSizeFetcher.instrumentation = instrumentation;
+  }
+
   public static long getObjectSize(Object obj) {
-    return 1l;
+    return instrumentation.getObjectSize(obj);
   }
 }
