@@ -1,0 +1,8 @@
+# Temporary files
+-*~
+-*#*
+
+# Build files
+-*.class
+-*.jar
+-.gradle
